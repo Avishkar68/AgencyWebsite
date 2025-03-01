@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 
@@ -9,6 +10,7 @@
   --color-primarybg : #67E8F9;
   --color-primarytext : #000000;
   --color-secondarytext : #B9B4C7;
-  --font-basicfont : Outfit;
+  --font-basicfont : Comic Neue;
   --font-heading:Delius Unicase;
+  
 }
