@@ -1,5 +1,6 @@
 import RotatingText from "../components/ui/RotatingText";
 import ReelsSection from "../sections/ReelsSection";
+import ThumbnailSection from "../sections/ThumbnailSection";
 
 const HomePage = () => {
   return (
@@ -38,6 +39,7 @@ const HomePage = () => {
       </div>
     </div> */}
     <ReelsSection/>
+    <ThumbnailSection />
     </div>
   );
 };
