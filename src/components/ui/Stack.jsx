@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function CardRotate({ children, onSendToBack, sensitivity }) {
   const x = useMotionValue(0);
@@ -41,17 +41,38 @@ export default function Stack({
   cardsData = [],
   animationConfig = { stiffness: 260, damping: 20 },
   sendToBackOnClick = false,
+  onActiveCardChange,
+  isPlaying,
+  isMuted,
 }) {
-  const [cards, setCards] = useState(
-    cardsData.length
-      ? cardsData
-      : [
-          { id: 1, img: "https://www.w3schools.com/html/mov_bbb.mp4" },
-          { id: 2, img: "https://www.w3schools.com/html/movie.mp4" },
-          { id: 3, img: "https://www.w3schools.com/html/mov_bbb.mp4" },
-          { id: 4, img: "https://www.w3schools.com/html/movie.mp4" },
-        ]
-  );
+  const [cards, setCards] = useState(cardsData);
+  const videoRefs = useRef([]);
+  const [activeReelId, setActiveReelId] = useState(cards[cards.length - 1]?.id);
+
+  useEffect(() => {
+    if (onActiveCardChange && cards.length) {
+      const newTopCardId = cards[cards.length - 1].id;
+      if (newTopCardId !== activeReelId) {
+        setActiveReelId(newTopCardId);
+        onActiveCardChange(newTopCardId); // ✅ Prevent infinite loop
+      }
+    }
+  }, [cards, onActiveCardChange, activeReelId]);
+
+  useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        const isTopCard = index === cards.length - 1;
+        if (isTopCard) {
+          isPlaying ? video.play() : video.pause();
+          video.muted = isMuted;
+        } else {
+          video.pause();
+          video.muted = true;
+        }
+      }
+    });
+  }, [isPlaying, isMuted, cards]);
 
   const sendToBack = (id) => {
     setCards((prev) => {
@@ -63,8 +84,6 @@ export default function Stack({
     });
   };
 
-  const topCardId = cards[cards.length - 1]?.id; // Get the top card ID
-
   return (
     <div
       className="relative"
@@ -75,9 +94,7 @@ export default function Stack({
       }}
     >
       {cards.map((card, index) => {
-        const randomRotate = randomRotation
-          ? Math.random() * 10 - 5 // Random degree between -5 and 5
-          : 0;
+        const randomRotate = randomRotation ? Math.random() * 10 - 5 : 0;
 
         return (
           <CardRotate
@@ -105,13 +122,12 @@ export default function Stack({
               }}
             >
               <video
+                ref={(el) => (videoRefs.current[index] = el)}
                 src={card.img}
                 className="w-full h-full object-cover pointer-events-none"
-                autoPlay
+                autoPlay={false} // Default to paused
                 loop
                 playsInline
-                muted
-                // muted={card.id !== topCardId} 
               />
             </motion.div>
           </CardRotate>
