@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
+import CircularGallery from "../components/ui/CircularGallery ";
 
 const PhotoSection = () => {
   return (
-    <div className="w-screen min-h-screen md:px-36">
-      <div className=" w-screen md:w-full h-screen">
-      jbkj
-      </div>
-    </div>
-  )
-}
 
-export default PhotoSection
+      <div style={{ height: "600px", position: "relative" }}>
+        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
+      </div>
+  );
+};
+
+export default PhotoSection;
