@@ -4,9 +4,8 @@ import chodudharyfinalll from "../assets/chodudharyfinalll.mp4";
 import free from "../assets/free.mp4";
 import Mumbai from "../assets/Mumbai.mp4";
 import laptopFinal from "../assets/laptopvalafinallll.mp4";
-import { GrLike } from "react-icons/gr";
-import { FaRegEye } from "react-icons/fa";
-import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { IoMdPause, IoMdPlay } from "react-icons/io";
+import { GoMute, GoUnmute } from "react-icons/go";
 
 const ReelsSection = () => {
   const reels = [
@@ -55,12 +54,12 @@ const ReelsSection = () => {
 
   return (
     <div className="w-screen min-h-screen md:px-36">
-      <div className=" w-screen md:w-full h-screen">
-        <div className="w-full text-3xl font-semibold py-2 font-heading">
+      <div className=" w-screen md:w-full h-screen text-center">
+        <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
           Short Form Content
         </div>
         <div className="w-full h-full flex flex-col md:flex-row items-center justify-around">
-          <div>
+          <div >
             <Stack
               randomRotation={true}
               sensitivity={180}
@@ -73,39 +72,45 @@ const ReelsSection = () => {
             />
             <div className=" h-[50px] rounded-lg mt-4 flex items-center justify-center space-x-4">
               <button
-                className="px-4 py-1 border  text-white rounded-lg"
+                className="px-4 py-1 text-2xl font-extrabold text-white rounded-lg"
                 onClick={() => setIsPlaying(!isPlaying)}
               >
-                {isPlaying ? "Pause" : "Play"}
+                {isPlaying ? <IoMdPause /> : <IoMdPlay /> }
               </button>
               <button
-                className="px-4 py-1 border text-white rounded-lg"
+                className="px-4 py-1 text-2xl font-extrabold text-white rounded-lg"
                 onClick={() => setIsMuted(!isMuted)}
               >
-                {isMuted ? "Unmute" : "Mute"}
+                {isMuted ? <GoUnmute /> : <GoMute />}
               </button>
             </div>
           </div>
-          <div className="font-basicfont p-4 w-lg ">
-            <h2 className="text-2xl font-bold">{activeReel.title}</h2>
-            <p className="text-xl text-gray-200">{activeReel.description}</p>
+          <div className="font-basicfont p-4 w-lg flex flex-col gap-10 text-left">
+            <span>
+              <h6 className="text-sm">TITLE</h6>
+              <h2 className="text-2xl text-gray-400 ">{activeReel.title}</h2>
+            </span>
+            <span>
+              <h6 className="text-sm">DESCREPTION</h6>
+              <p className="text-2xl text-gray-400">{activeReel.description}</p>
+            </span>
 
-            <span className="flex items-center gap-2">
-            <HiOutlineDesktopComputer className="text-gray-400" />
-            <p className="text-xl text-gray-400">{activeReel.software}</p>
+            <span>
+              <h6 className="text-sm">SOFTWARE</h6>
+              <p className="text-2xl text-gray-400">{activeReel.software}</p>
             </span>
 
             {/* <p className="text-xl text-gray-600">{activeReel.engagement.engagementRate}</p> */}
-            <span className="flex items-center gap-2">
-              <FaRegEye className="text-gray-400"/>
-              <p className="text-xl text-gray-400">
+            <span>
+              <h6 className="text-sm">VIEWS</h6>
+              <p className="text-2xl text-gray-400">
                 {activeReel.engagement.views}
               </p>
             </span>
 
-            <span className="flex items-center gap-2">
-              <GrLike className="text-gray-400" />
-              <p className="text-xl text-gray-400">
+            <span>
+              <h6 className="text-sm">LIKES</h6>
+              <p className="text-2xl text-gray-400">
                 {activeReel.engagement.likes}
               </p>
             </span>

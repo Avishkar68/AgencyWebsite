@@ -1,59 +1,80 @@
-// import React from "react";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// const videos = [
-//   "https://www.youtube.com/embed/dQw4w9WgXcQ",
-//   "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-//   "https://www.youtube.com/embed/tgbNymZ7vqY"
-// ];
+const testimonials = [
+  {
+    name: "John Doe",
+    role: "CEO, TechCorp",
+    videoUrl: "https://www.youtube.com/embed/7LnJCwj5FN0",
+  },
+  {
+    name: "Jane Smith",
+    role: "Marketing Manager",
+    videoUrl: "https://www.youtube.com/embed/5yXGw3Qh5YE",
+  },
+  {
+    name: "Mike Johnson",
+    role: "Freelancer",
+    videoUrl: "https://www.youtube.com/embed/7LnJCwj5FN0",
+  },
+];
 
-// const VideoCarousel = () => {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     centerMode: true,
-//     centerPadding: "0px",
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           arrows: true,
-//         }
-//       },
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           arrows: false,
-//         }
-//       }
-//     ]
-//   };
+const YoutubeCarousel = () => {
+  const [index, setIndex] = useState(0);
 
-//   return (
-//     <div className="w-full max-w-4xl mx-auto text-center py-10 mt-40  relative ">
-//       <h2 className="text-3xl font-semibold mb-6">Youtube Videos</h2>
-//       <Slider {...settings} className="relative ">
-//         {videos.map((video, index) => (
-//           <div key={index} className="flex justify-center items-center w-full">
-//             <iframe
-//               className="mx-auto md:w-full md:max-w-3xl h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96 "
-//               src={video}
-//               title={`YouTube Video ${index + 1}`}
-//               frameBorder="0"
-//               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//               allowFullScreen
-//             ></iframe>
-//           </div>
-//         ))}
-//       </Slider>
-//     </div>
-//   );
-// };
+  const nextTestimonial = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
 
-// export default VideoCarousel;
+  const prevTestimonial = () => {
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <div className="h-screen text-center flex flex-col items-center justify-center bg-backgroundcolor">
+      <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
+        Short Form Content
+      </div>
+      <div className="relative w-[90%] max-w-4xl bg-backgroundcolor p-6 rounded-xl shadow-lg">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center"
+        >
+          <div className="w-full aspect-video mb-4">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src={testimonials[index].videoUrl}
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
+
+        <div className="flex justify-between mt-6">
+          <button
+            onClick={prevTestimonial}
+            className="p-2 bg-gray-200 rounded-full"
+          >
+            <ChevronLeft className="text-backgroundcolor w-6 h-6" />
+          </button>
+          <button
+            onClick={nextTestimonial}
+            className="p-2 bg-gray-200 rounded-full"
+          >
+            <ChevronRight className="text-backgroundcolor w-6 h-6" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default YoutubeCarousel;

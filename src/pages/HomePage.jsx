@@ -1,7 +1,9 @@
 import RotatingText from "../components/ui/RotatingText";
 import PhotoSection from "../sections/PhotoSection";
 import ReelsSection from "../sections/ReelsSection";
+import Testimonial from "../sections/Testimonial";
 import ThumbnailSection from "../sections/ThumbnailSection";
+import YoutubeCarousel from "../sections/YoutubeCorousel";
 
 const HomePage = () => {
   return (
@@ -43,6 +45,8 @@ const HomePage = () => {
     <ThumbnailSection />
     <div className="w-screen flex items-center justify-center text-[36px] md:text-[64px] font-bold ">Youtube Thumbnails</div>
     <PhotoSection />
+    <YoutubeCarousel/>
+    <Testimonial/>
     </div>
   );
 };
