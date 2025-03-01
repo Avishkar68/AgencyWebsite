@@ -1,4 +1,5 @@
 import RotatingText from "../components/ui/RotatingText";
+import PhotoSection from "../sections/PhotoSection";
 import ReelsSection from "../sections/ReelsSection";
 import ThumbnailSection from "../sections/ThumbnailSection";
 
@@ -40,6 +41,7 @@ const HomePage = () => {
     </div> */}
     <ReelsSection/>
     <ThumbnailSection />
+    <PhotoSection />
     </div>
   );
 };
