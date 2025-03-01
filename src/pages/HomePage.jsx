@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div>
 
-    <div className="min-h-[30%] mt-40">
+    {/* <div className="min-h-[400px] mt-40">
       <div className="border flex flex-col gap-4 ">
         <div className="flex items-center justify-center gap-6 text-[48px] font-semibold font-basicfont">
           We do{" "}
@@ -36,7 +36,7 @@ const HomePage = () => {
           Place!
         </div>
       </div>
-    </div>
+    </div> */}
     <ReelsSection/>
     </div>
   );
