@@ -1,9 +1,12 @@
 import RotatingText from "../components/ui/RotatingText";
+import ReelsSection from "../sections/ReelsSection";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen mt-40">
-      <div className=" flex flex-col gap-4 ">
+    <div>
+
+    <div className="min-h-[30%] mt-40">
+      <div className="border flex flex-col gap-4 ">
         <div className="flex items-center justify-center gap-6 text-[48px] font-semibold font-basicfont">
           We do{" "}
           <RotatingText
@@ -33,6 +36,8 @@ const HomePage = () => {
           Place!
         </div>
       </div>
+    </div>
+    <ReelsSection/>
     </div>
   );
 };

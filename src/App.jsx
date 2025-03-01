@@ -6,7 +6,7 @@ import PricingPage from './pages/PricingPage';
 
 function App() {
   return (
-    <div className="border flex flex-col items-center justify-center ">
+    <div className=" flex flex-col items-center justify-center ">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

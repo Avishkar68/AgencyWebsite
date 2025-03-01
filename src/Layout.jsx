@@ -4,12 +4,12 @@ import Footer from "./components/Footer";
 
 const Layout = () => {
   return (
-    <div className=" w-full bg-backgroundcolor text-[#F4F3FC] font-[Figtree] ">
+    <div className=" w-full bg-backgroundcolor text-[#F4F3FC] font-[Figtree] overflow-hidden">
       <Navbar />
-      <main className="flex justify-center overflow-hidden ">
+      <main className="flex justify-center  ">
         <Outlet /> {/* This is where child routes will be rendered */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
