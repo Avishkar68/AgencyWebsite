@@ -29,46 +29,52 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="rounded-lg"
+      className="rounded-lg bg-transparent hover:shadow-lg shadow-blue-950 p-4"
     >
+      {/* Image Carousel */}
+      <div className="relative w-full h-[300px] overflow-hidden rounded-2xl">
+        <img
+          src={images[currentImageIndex]}
+          alt="project_image"
+          className="w-full h-full object-cover rounded-2xl transition-all duration-500"
+        />
 
-        <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
-          <img
-            src={images[currentImageIndex]}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl transition-all duration-500"
-          />
+        {/* Left Arrow */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80 cursor-pointer z-10"
+        >
+          ◀
+        </button>
 
-          {/* Left Arrow */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80"
+        {/* Right Arrow */}
+        <button
+          onClick={handleNext}
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80 cursor-pointer z-10"
+        >
+          ▶
+        </button>
+
+        {/* GitHub Icon */}
+        <div className="absolute inset-0 flex justify-end m-3">
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            className="bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
           >
-            ◀
-          </button>
-
-          {/* Right Arrow */}
-          <button
-            onClick={handleNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80"
-          >
-            ▶
-          </button>
-
-          {/* GitHub Icon */}
-          <div className="absolute inset-0 flex justify-end m-3">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={"https://i.ibb.co/KGBzX2v/github.png"}
-                alt="source code"
-                className="w-[30px] object-contain bg-black rounded-full"
-              />
-            </div>
+            <img
+              src={"https://i.ibb.co/KGBzX2v/github.png"}
+              alt="source code"
+              className="w-[30px] object-contain bg-black rounded-full"
+            />
           </div>
         </div>
+      </div>
+
+      {/* Project Name & Description */}
+      <div className="mt-4 text-center">
+        <h3 className="text-lg font-bold text-white">{name}</h3>
+        <p className="text-sm text-gray-200 mt-1">{description}</p>
+      </div>
     </motion.div>
   );
 };

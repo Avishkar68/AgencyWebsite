@@ -22,10 +22,10 @@ const projects = [
         },
       ],
       image1: "https://i.ibb.co/LvJGmLy/escout.jpg", // Replace 'escout' with your actual image variable or path
-      image2: "https://i.ibb.co/LvJGmLy/escout.jpg", // Replace 'escout' with your actual image variable or path
-      image3: "https://i.ibb.co/LvJGmLy/escout.jpg", // Replace 'escout' with your actual image variable or path
-      image4: "https://i.ibb.co/LvJGmLy/escout.jpg", // Replace 'escout' with your actual image variable or path
-      source_code_link: "https://github.com/Avishkar68/eScout", // Replace with your actual GitHub repository link
+      image2: "https://i.ibb.co/v6nBMZYH/Whats-App-Image-2025-03-02-at-16-12-17-c6818609.jpg", // Replace 'escout' with your actual image variable or path
+      image3: "https://i.ibb.co/fddzrDz4/Whats-App-Image-2025-03-02-at-16-11-03-3fd391ab.jpg", // Replace 'escout' with your actual image variable or path
+      image4: "https://i.ibb.co/5gWYFF5n/Whats-App-Image-2025-03-02-at-16-12-00-201dacf4.jpg", // Replace 'escout' with your actual image variable or path
+      source_code_link: "https://github.com/ShirodkarFalashree/eScout-web", // Replace with your actual GitHub repository link
     },
   
     {
@@ -46,10 +46,10 @@ const projects = [
           color: "orange-text-gradient",
         },
       ],
-      image1: "https://i.ibb.co/h77ykN1/todesktopclone.jpg", // Add your image path here
-      image2: "https://i.ibb.co/h77ykN1/todesktopclone.jpg", // Add your image path here
-      image3: "https://i.ibb.co/h77ykN1/todesktopclone.jpg", // Add your image path here
-      image4: "https://i.ibb.co/h77ykN1/todesktopclone.jpg", // Add your image path here
+      image1: "https://i.ibb.co/JWcxKtN6/image.png", // Add your image path here
+      image2: "https://i.ibb.co/G3brpybz/image.png", // Add your image path here
+      image3: "https://i.ibb.co/YFYwwQXk/image.png", // Add your image path here
+      image4: "https://i.ibb.co/dJVT680M/image.png", // Add your image path here
       source_code_link: "https://github.com/Avishkar68/ToDesktop-Frontend-Clone", // Replace with your actual GitHub repository link
     },
   
@@ -75,14 +75,14 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image1: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      image2: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      image3: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      image4: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
+      image1: "https://i.ibb.co/QRtd7zC/image.png", // Add your image path here
+      image2: "https://i.ibb.co/WWcHQ9FS/image.png", // Add your image path here
+      image3: "https://i.ibb.co/xSWQrvxB/image.png", // Add your image path here
+      image4: "https://i.ibb.co/V09ypBDx/image.png", // Add your image path here
       source_code_link: "https://github.com/Avishkar68/twogoodco_clone", // Replace with your actual GitHub repository link
     },
     {
-      name: "TwoGoodCo",
+      name: "E-commerce",
       description:
         "A visually appealing web-based clone of the Twogoodco website, featuring smooth animations and interactive scrolling effects using GSAP and Locomotive Scroll for an enhanced user experience.",
       tags: [
@@ -103,11 +103,11 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image1: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      image2: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      image3: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      image4: "https://i.ibb.co/pL6GgYJ/twogoodco.jpg", // Add your image path here
-      source_code_link: "https://github.com/Avishkar68/twogoodco_clone", // Replace with your actual GitHub repository link
+      image1: "https://i.ibb.co/3YsK2483/image.png", // Add your image path here
+      image2: "https://i.ibb.co/TMwbv1S9/image.png", // Add your image path here
+      image3: "https://i.ibb.co/DPcwts1Q/image.png", // Add your image path here
+      image4: "https://i.ibb.co/kVgLJTpw/image.png", // Add your image path here
+      source_code_link: "https://here-fashion.netlify.app/", // Replace with your actual GitHub repository link
     },
   ];
 

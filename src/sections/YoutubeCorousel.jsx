@@ -57,13 +57,13 @@ const YoutubeCarousel = () => {
         <div className="flex justify-between mt-6">
           <button
             onClick={prevTestimonial}
-            className="p-2 bg-gray-200 rounded-full"
+            className="p-2 bg-gray-200 rounded-full hover:cursor-pointer"
           >
             <ChevronLeft className="text-backgroundcolor w-6 h-6" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="p-2 bg-gray-200 rounded-full"
+            className="p-2 bg-gray-200 rounded-full hover:cursor-pointer"
           >
             <ChevronRight className="text-backgroundcolor w-6 h-6" />
           </button>
