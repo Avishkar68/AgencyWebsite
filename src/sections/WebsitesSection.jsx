@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion.js";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProjectCard = ({
   index,
@@ -29,31 +30,31 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="rounded-lg bg-transparent hover:shadow-lg shadow-blue-950 p-4"
+      className="rounded-lg bg-transparent hover:shadow-lg shadow-gray-400 p-4 transition ease-in delay-200"
     >
       {/* Image Carousel */}
-      <div className="relative w-full h-[230px] md:h-[300px] overflow-hidden rounded-2xl">
+      <div className="relative w-full h-[230px] md:h-[300px] overflow-hidden rounded-sm">
         <img
           src={images[currentImageIndex]}
           alt="project_image"
-          className="w-full h-full object-cover rounded-2xl transition-all duration-500"
+          className="w-full h-full object-cover rounded-sm transition-all duration-500"
         />
 
         {/* Left Arrow */}
         <button
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80 cursor-pointer z-10"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-sm hover:bg-opacity-80 cursor-pointer z-10"
         >
-          ◀
-        </button>
+            <ChevronLeft className="text-backgroundcolor w-6 h-6" />
+            </button>
 
         {/* Right Arrow */}
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80 cursor-pointer z-10"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-sm hover:bg-opacity-80 cursor-pointer z-10"
         >
-          ▶
-        </button>
+            <ChevronRight className="text-#2F3246 w-6 h-6" />
+            </button>
 
         {/* GitHub Icon */}
         <div className="absolute inset-0 flex justify-end m-3">
@@ -72,8 +73,8 @@ const ProjectCard = ({
 
       {/* Project Name & Description */}
       <div className="mt-4 text-center">
-        <h3 className="text-lg font-bold text-white">{name}</h3>
-        <p className="text-sm text-gray-200 mt-1">{description}</p>
+        <h3 className="text-lg font-bold text-primarytext">{name}</h3>
+        <p className="text-sm text-primarytext mt-1">{description}</p>
       </div>
     </motion.div>
   );

@@ -31,7 +31,7 @@ const YoutubeCarousel = () => {
 
   return (
     <div className="md:h-screen text-center flex flex-col items-center justify-center bg-backgroundcolor">
-      <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
+      <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading text-primarytext">
         Youtube videos
       </div>
       <div className="relative w-[90%] max-w-4xl bg-backgroundcolor p-6 rounded-xl shadow-lg">
@@ -57,15 +57,15 @@ const YoutubeCarousel = () => {
         <div className="flex justify-between mt-6">
           <button
             onClick={prevTestimonial}
-            className="p-2 bg-gray-200 rounded-full hover:cursor-pointer"
+            className="p-2 bg-primarytext rounded-full hover:cursor-pointer"
           >
             <ChevronLeft className="text-backgroundcolor w-6 h-6" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="p-2 bg-gray-200 rounded-full hover:cursor-pointer"
+            className="p-2 bg-primarytext rounded-full hover:cursor-pointer"
           >
-            <ChevronRight className="text-backgroundcolor w-6 h-6" />
+            <ChevronRight className="text-#2F3246 w-6 h-6" />
           </button>
         </div>
       </div>

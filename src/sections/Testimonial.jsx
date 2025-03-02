@@ -28,17 +28,17 @@ const testimonials = [
 export default function Testimonial() {
   return (
     <div className="text-center mt-40 md:px-20">
-      <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
+      <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading text-primarytext">
         Feedbacks from our previous clients
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-6 w-full md:max-w-4xl mx-auto justify-center">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-2xl p-6 text-center"
+            className="bg-white hover:shadow-lg rounded-sm p-6 text-center transition ease-in font-semibold"
           >
-            <p className="text-gray-600 italic">"{testimonial.feedback}"</p>
-            <p className="text-sm text-gray-500">{testimonial.position}</p>
+            <p className="text-primarytext italic">"{testimonial.feedback}"</p>
+            <p className="text-sm text-primarytext font-extrabold">{testimonial.position}</p>
           </div>
         ))}
       </div>
