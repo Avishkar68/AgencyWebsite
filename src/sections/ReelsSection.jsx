@@ -55,7 +55,7 @@ const ReelsSection = () => {
   return (
     <div className="w-screen min-h-screen md:px-36 mb-60 md:mb-0">
       <div className=" w-screen md:w-full h-screen text-center">
-        <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
+        <div className="w-full text-primarytext text-[36px] md:text-[64px] font-bold py-2 font-heading">
           Short Form Content
         </div>
         <div className="w-full h-full flex flex-col md:flex-row items-center justify-around">
@@ -72,13 +72,13 @@ const ReelsSection = () => {
             />
             <div className=" h-[50px] rounded-lg mt-4 flex items-center justify-center space-x-4">
               <button
-                className="px-4 py-1 text-2xl font-extrabold text-white rounded-lg"
+                className="px-4 py-1 text-2xl font-extrabold text-primarytext rounded-lg"
                 onClick={() => setIsPlaying(!isPlaying)}
               >
                 {isPlaying ? <IoMdPause /> : <IoMdPlay /> }
               </button>
               <button
-                className="px-4 py-1 text-2xl font-extrabold text-white rounded-lg"
+                className="px-4 py-1 text-2xl font-extrabold text-primarytext rounded-lg"
                 onClick={() => setIsMuted(!isMuted)}
               >
                 {isMuted ? <GoUnmute /> : <GoMute />}
@@ -87,30 +87,30 @@ const ReelsSection = () => {
           </div>
           <div className="font-basicfont p-4  flex flex-col gap-10 text-left">
             <span>
-              <h6 className="text-sm">TITLE</h6>
-              <h2 className="text-2xl text-gray-400 ">{activeReel.title}</h2>
+              <h6 className="text-sm text-primarytext">TITLE</h6>
+              <h2 className="text-2xl text-primarytext ">{activeReel.title}</h2>
             </span>
             <span>
-              <h6 className="text-sm">DESCREPTION</h6>
-              <p className="text-2xl text-gray-400">{activeReel.description}</p>
+              <h6 className="text-sm text-primarytext">DESCREPTION</h6>
+              <p className="text-2xl text-primarytext">{activeReel.description}</p>
             </span>
 
             <span>
-              <h6 className="text-sm">SOFTWARE</h6>
-              <p className="text-2xl text-gray-400">{activeReel.software}</p>
+              <h6 className="text-sm text-primarytext ">SOFTWARE</h6>
+              <p className="text-2xl text-primarytext">{activeReel.software}</p>
             </span>
 
             {/* <p className="text-xl text-gray-600">{activeReel.engagement.engagementRate}</p> */}
             <span>
-              <h6 className="text-sm">VIEWS</h6>
-              <p className="text-2xl text-gray-400">
+              <h6 className="text-sm text-primarytext">VIEWS</h6>
+              <p className="text-2xl text-primarytext">
                 {activeReel.engagement.views}
               </p>
             </span>
 
             <span>
-              <h6 className="text-sm">LIKES</h6>
-              <p className="text-2xl text-gray-400">
+              <h6 className="text-sm text-primarytext">LIKES</h6>
+              <p className="text-2xl text-primarytext">
                 {activeReel.engagement.likes}
               </p>
             </span>
