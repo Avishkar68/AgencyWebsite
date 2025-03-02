@@ -53,7 +53,7 @@ const ReelsSection = () => {
   };
 
   return (
-    <div className="w-screen min-h-screen md:px-36 mb-28 md:mb-0">
+    <div className="w-screen min-h-screen md:px-36 mb-60 md:mb-0">
       <div className=" w-screen md:w-full h-screen text-center">
         <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
           Short Form Content
