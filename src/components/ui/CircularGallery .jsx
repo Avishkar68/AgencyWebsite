@@ -370,8 +370,13 @@ class App {
   onTouchMove(e) {
     if (!this.isDown) return
     const x = e.touches ? e.touches[0].clientX : e.clientX
-    const distance = (this.start - x) * 0.05
+    const distance = (this.start - x) * 0.03 //changed
     this.scroll.target = this.scroll.position + distance
+
+    // if (!this.isDown) return;
+    // const x = e.touches ? e.touches[0].clientX : e.clientX;
+    // const distance = (this.start - x) * 0.04; // Reduced from 0.05 to 0.02 for slower drag response
+    // this.scroll.target = this.scroll.position + distance;
   }
   onTouchUp() {
     this.isDown = false
@@ -380,6 +385,11 @@ class App {
   onWheel() {
     this.scroll.target += 2
     this.onCheckDebounce()
+    // const speedFactor = 1.2; // Adjust this (Lower = Slower)
+    // this.scroll.target += e.deltaY * 0.001 * speedFactor; // Reduced multiplier for slower scroll
+    // this.onCheckDebounce();
+    // changed
+  
   }
   onCheck() {
     if (!this.medias || !this.medias[0]) return

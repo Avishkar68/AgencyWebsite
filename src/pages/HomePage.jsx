@@ -43,7 +43,7 @@ const HomePage = () => {
     </div> */}
     <ReelsSection/>
     <ThumbnailSection />
-    <div className="w-screen flex items-center justify-center text-[36px] md:text-[64px] font-bold ">Youtube Thumbnails</div>
+    <div className="w-screen flex items-center justify-center text-[36px] md:text-[64px] font-bold ">Our Clicks</div>
     <PhotoSection />
     <YoutubeCarousel/>
     <Testimonial/>

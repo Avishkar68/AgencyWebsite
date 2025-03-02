@@ -13,11 +13,7 @@ const testimonials = [
     role: "Marketing Manager",
     videoUrl: "https://www.youtube.com/embed/5yXGw3Qh5YE",
   },
-  {
-    name: "Mike Johnson",
-    role: "Freelancer",
-    videoUrl: "https://www.youtube.com/embed/7LnJCwj5FN0",
-  },
+  
 ];
 
 const YoutubeCarousel = () => {
@@ -36,7 +32,7 @@ const YoutubeCarousel = () => {
   return (
     <div className="h-screen text-center flex flex-col items-center justify-center bg-backgroundcolor">
       <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
-        Short Form Content
+        Youtube videos
       </div>
       <div className="relative w-[90%] max-w-4xl bg-backgroundcolor p-6 rounded-xl shadow-lg">
         <motion.div

@@ -1,61 +1,48 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { div } from "framer-motion/client";
 
 const testimonials = [
-  {
-    name: "John Doe",
-    feedback: "This service was amazing! Highly recommend to anyone.",
-    position: "CEO, XYZ Corp",
-  },
-  {
-    name: "Jane Smith",
-    feedback: "Very professional and high-quality work. Would use again.",
-    position: "Marketing Manager, ABC Ltd.",
-  },
-  {
-    name: "Michael Brown",
-    feedback: "Exceptional experience, exceeded my expectations!",
-    position: "Founder, Startup Inc.",
-  },
-];
-
+    {
+      name: "John Doe",
+      feedback: "Absolutely amazing video editing! The transitions, effects, and pacing made my content look professional and engaging. Highly recommended!",
+      position: "Content Creator",
+    },
+    {
+      name: "Jane Smith",
+      feedback: "Incredible work on both graphics and video! The designs were eye-catching, and the edits were smooth and professional. Will definitely work with you again!",
+      position: "Marketing Manager",
+    },
+    {
+      name: "Michael Brown",
+      feedback: "Exceeded all expectations! The photos were stunning, the video edits were cinematic, and the overall creativity brought my brand to life!",
+      position: "Founder",
+    },
+    {
+      name: "Emily White",
+      feedback: "Outstanding work in photography, video editing, and content creation! Your creativity and attention to detail truly made my brand stand out.",
+      position: "Influencer & Business Owner",
+    },
+  ];
+  
 export default function Testimonial() {
-  const [index, setIndex] = useState(0);
-
-  const nextTestimonial = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
-  };
-
   return (
-    <div className="flex flex-col items-center justify-center p-6">
-      <div className="relative bg-white shadow-lg rounded-2xl p-6 w-80 md:w-96 text-center">
-        <p className="text-gray-600 italic">"{testimonials[index].feedback}"</p>
-        <h3 className="mt-4 font-semibold text-lg">{testimonials[index].name}</h3>
-        <p className="text-sm text-gray-500">{testimonials[index].position}</p>
-
-        <div className="absolute top-1/2 -left-5 transform -translate-y-1/2">
-          <button
-            onClick={prevTestimonial}
-            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+    <div className="text-center mt-40 px-20">
+      <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
+        Feedbacks from our previous clients
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-6 w-full max-w-4xl mx-auto justify-center">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-2xl p-6 text-center"
           >
-            <ChevronLeft size={20} />
-          </button>
-        </div>
-        <div className="absolute top-1/2 -right-5 transform -translate-y-1/2">
-          <button
-            onClick={nextTestimonial}
-            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
-          >
-            <ChevronRight size={20} />
-          </button>
-        </div>
+            <p className="text-gray-600 italic">"{testimonial.feedback}"</p>
+            <p className="text-sm text-gray-500">{testimonial.position}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
+  
 }
