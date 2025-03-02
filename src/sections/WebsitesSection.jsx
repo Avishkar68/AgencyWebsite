@@ -32,7 +32,7 @@ const ProjectCard = ({
       className="rounded-lg bg-transparent hover:shadow-lg shadow-blue-950 p-4"
     >
       {/* Image Carousel */}
-      <div className="relative w-full h-[300px] overflow-hidden rounded-2xl">
+      <div className="relative w-full h-[230px] md:h-[300px] overflow-hidden rounded-2xl">
         <img
           src={images[currentImageIndex]}
           alt="project_image"
