@@ -27,7 +27,7 @@ const testimonials = [
   
 export default function Testimonial() {
   return (
-    <div className="text-center mt-40 md:px-20">
+    <div className="text-center mt-40 md:px-20 pb-16">
       <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading text-primarytext">
         Feedbacks from our previous clients
       </div>

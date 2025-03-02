@@ -5,7 +5,10 @@ const Navbar = () => {
   return (
     <div className="font-basicfont h-[80px] flex justify-between px-4 py-2">
       <div className="flex items-center justify-center">
+        <Link to="/">
         <img src={logo} className="w-[40px]" alt="Logo" />
+        </Link>
+       
       </div>
       <div className="flex items-center justify-center gap-6 text-xl">
         <div className="flex items-center justify-center gap-4">

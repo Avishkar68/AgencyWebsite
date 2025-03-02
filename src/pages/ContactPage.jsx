@@ -5,11 +5,11 @@ import { FaInstagram } from "react-icons/fa6";
 
 const ContactPage = () => {
   return (
-    <section className="h-screen py-16 px-6 md:px-12 text-center bg-gray-200">
+    <section className="h-screen py-16 px-6 md:px-12 text-center bg-backgroundcolor">
       <h2 className="text-4xl font-semibold text-gray-900 mb-10">Contact Us</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card 1 */}
-        <div className="bg-white p-6 rounded-2xl h-[180px] shadow-md text-left shadow-[rgba(179,_184,_214,_0.7)_-12px_12px_50px_0px] flex flex-col items-start justify-between">
+        <div className="bg-white hover:shadow-[rgba(179,184,214,0.41)] p-6 rounded-2xl h-[180px] shadow-md text-left shadow-[rgba(179,_184,_214,_0.7)_-12px_12px_50px_0px] flex flex-col items-start justify-between">
           <div>
             <div className="text-4xl mb-4">
               <FaInstagram className="text-black" />
@@ -29,7 +29,7 @@ const ContactPage = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white p-6 rounded-2xl  h-[180px]  shadow-md text-left shadow-[rgba(179,_184,_214,_0.7)_-12px_12px_50px_0px] flex flex-col items-start justify-between">
+        <div className="bg-white hover:shadow-[rgba(179,184,214,0.41)] p-6 rounded-2xl h-[180px] shadow-md text-left shadow-[rgba(179,_184,_214,_0.7)_-12px_12px_50px_0px] flex flex-col items-start justify-between">
           <div>
             <div className="text-4xl mb-4">
               <CiMail className="text-black" />
@@ -47,7 +47,7 @@ const ContactPage = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white  h-[180px] p-6 rounded-2xl   shadow-md text-left shadow-[rgba(179,_184,_214,_0.7)_-12px_12px_50px_0px] flex flex-col items-start justify-between">
+        <div className="bg-white hover:shadow-[rgba(179,184,214,0.41)] p-6 rounded-2xl h-[180px] shadow-md text-left shadow-[rgba(179,_184,_214,_0.7)_-12px_12px_50px_0px] flex flex-col items-start justify-between">
           <div>
             <div className="text-4xl mb-4">
               <SiGooglemeet className="text-black" />

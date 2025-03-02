@@ -30,7 +30,7 @@ const HomePage = () => {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="mt-6 text-lg md:text-2xl text-gray-700 max-w-3xl font-medium"
       >
-        At <span className="font-bold ">[Your Agency Name]</span>, we turn{" "}
+         <span className="font-bold "></span>We turn{" "}
         <span className=" font-bold">pixels into magic</span>,{" "}
         <span className="font-bold">words into impact</span>, and{" "}
         <span className=" font-bold">ideas into unforgettable brands</span>. 

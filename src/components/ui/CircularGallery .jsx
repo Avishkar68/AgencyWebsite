@@ -9,6 +9,18 @@ import {
   Texture,
 } from 'ogl'
 
+import manjar from "../../assets/manjar.jpg";
+import temple from "../../assets/temple.jpg";
+import bandya from "../../assets/bandya.jpg";
+import kharutai from "../../assets/kharutai.jpg";
+import gulab from "../../assets/gulab.jpg";
+import avifool from "../../assets/avifool.jpg";
+import ful from "../../assets/ful.jpg";
+import butterfly from "../../assets/butterfly.jpg"
+import avibutterfly from "../../assets/avibutterfly.jpg";
+import flower from "../../assets/flower.jpg";
+import cactus from "../../assets/cactus.jpg";
+import falful from "../../assets/falful.jpg";
 function debounce(func, wait) {
   let timeout
   return function (...args) {
@@ -328,18 +340,18 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" }
+      { image: manjar, text: '' },
+      { image: avifool, text: '' },
+      { image: kharutai, text: '' },
+      { image: temple, text: '' },
+      { image: ful, text: '' },
+      { image: bandya, text: '' },
+      { image: gulab, text: '' },
+      { image: butterfly, text: '' },
+      { image: avibutterfly, text: '' },
+      { image: flower, text: '' },
+      { image: cactus, text: '' },
+      { image: falful, text: "" }
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
