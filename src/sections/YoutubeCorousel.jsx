@@ -30,7 +30,7 @@ const YoutubeCarousel = () => {
   };
 
   return (
-    <div className="h-screen text-center flex flex-col items-center justify-center bg-backgroundcolor">
+    <div className="md:h-screen text-center flex flex-col items-center justify-center bg-backgroundcolor">
       <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
         Youtube videos
       </div>

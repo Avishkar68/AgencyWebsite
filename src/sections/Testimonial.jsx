@@ -27,11 +27,11 @@ const testimonials = [
   
 export default function Testimonial() {
   return (
-    <div className="text-center mt-40 px-20">
+    <div className="text-center mt-40 md:px-20">
       <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
         Feedbacks from our previous clients
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-6 w-full max-w-4xl mx-auto justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-6 w-full md:max-w-4xl mx-auto justify-center">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}

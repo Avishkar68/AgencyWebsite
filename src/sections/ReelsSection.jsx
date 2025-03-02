@@ -53,7 +53,7 @@ const ReelsSection = () => {
   };
 
   return (
-    <div className="w-screen min-h-screen md:px-36">
+    <div className="w-screen min-h-screen md:px-36 mb-28 md:mb-0">
       <div className=" w-screen md:w-full h-screen text-center">
         <div className="w-full text-[36px] md:text-[64px] font-bold py-2 font-heading">
           Short Form Content
@@ -85,7 +85,7 @@ const ReelsSection = () => {
               </button>
             </div>
           </div>
-          <div className="font-basicfont p-4 w-lg flex flex-col gap-10 text-left">
+          <div className="font-basicfont p-4  flex flex-col gap-10 text-left">
             <span>
               <h6 className="text-sm">TITLE</h6>
               <h2 className="text-2xl text-gray-400 ">{activeReel.title}</h2>
