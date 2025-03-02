@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimation, useTransform } from "framer-motion";
 import thumbnail333_00108058 from "../../assets/thumbnail333_00108058.jpg";
-
+import jothpur from "../../assets/jothpurThumbnail.png"
+import health from "../../assets/health.jpg"
+import woods from "../../assets/woods.jpg"
+import clothes from "../../assets/clothes.jpg"
+import yoga from "../../assets/yoga.jpg"
 const IMGS = [
   thumbnail333_00108058,
+  jothpur,
+  health,
+  woods,
+  clothes,
+  yoga,
   thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
-  thumbnail333_00108058,
+  jothpur,
+  health,
+  woods,
+  clothes,
+  
 ];
 
 const RollingGallery = ({
