@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './Layout';
 import HomePage from './pages/HomePage';
 import PricingPage from './pages/PricingPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="pricing" element={<PricingPage />} />
+            <Route path="contact" element={<ContactPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
