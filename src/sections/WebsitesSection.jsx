@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Tilt } from "react-tilt";
 import { fadeIn } from "../utils/motion.js";
 
 const ProjectCard = ({
